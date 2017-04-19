@@ -1,0 +1,77 @@
+{
+  "name": "dapps",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Tags": {
+      "type": [
+        "string"
+      ]
+    },
+    "Status": {
+      "type": "string",
+      "required": true,
+      "default": "In Progress"
+    },
+    "likes": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "timesFavorited": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "owners": {
+      "type": [
+        "string"
+      ],
+      "required": true
+    },
+    "releaseDate": {
+      "type": "date"
+    },
+    "website": {
+      "type": "url"
+    },
+    "socialLinks": {
+      "type": [
+        "object"
+      ]
+    },
+    "logoImg": {
+      "type": "string"
+    },
+    "featured": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "comments": {
+      "type": [
+        "comment"
+      ]
+    },
+    "aboutContent": {
+      "type": "string",
+      "required": true
+    },
+    "aboutImages": {
+      "type": [
+        "string"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
