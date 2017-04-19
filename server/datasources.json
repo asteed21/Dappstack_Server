@@ -1,12 +1,12 @@
 {
   "DappstackDB": {
-    "host": "myserver",
+    "host": "localhost",
     "port": 27017,
     "url": "",
     "database": "test",
-    "password": "demo",
+    "password": "",
     "name": "DappstackDB",
-    "user": "demo",
+    "user": "",
     "connector": "mongodb"
   }
 }

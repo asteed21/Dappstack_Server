@@ -6,16 +6,16 @@
     "validateUpsert": true
   },
   "properties": {
-    "Name": {
+    "name": {
       "type": "string",
       "required": true
     },
-    "Tags": {
+    "tags": {
       "type": [
         "string"
       ]
     },
-    "Status": {
+    "status": {
       "type": "string",
       "required": true,
       "default": "In Progress"
