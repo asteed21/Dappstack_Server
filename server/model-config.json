@@ -16,5 +16,9 @@
   "dapps": {
     "dataSource": "DappstackDB",
     "public": true
+  },
+  "DappStackUser": {
+    "dataSource": "DappstackDB",
+    "public": true
   }
 }
