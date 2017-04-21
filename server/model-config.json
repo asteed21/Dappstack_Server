@@ -13,11 +13,15 @@
       "./mixins"
     ]
   },
-  "dapps": {
+  "dapp": {
     "dataSource": "DappstackDB",
     "public": true
   },
-  "DappStackUser": {
+  "dappStackUser": {
+    "dataSource": "DappstackDB",
+    "public": true
+  },
+  "comment": {
     "dataSource": "DappstackDB",
     "public": true
   }
