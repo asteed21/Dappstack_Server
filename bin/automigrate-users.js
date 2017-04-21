@@ -2,7 +2,7 @@ var path = require('path');
 
 var app = require(path.resolve(__dirname, '../server/server'));
 var ds = app.datasources.DappstackDB;
-ds.automigrate('dappStackUser', function(err) {
+ds.automigrate('DappStackUser', function(err) {
   if (err) throw err;
 
   var dappStackUsers = [
@@ -29,7 +29,7 @@ ds.automigrate('dappStackUser', function(err) {
   ];
   var count = dappStackUsers.length;
   dappStackUsers.forEach(function(dappStackUser) {
-    app.models.dappStackUser.create(dappStackUser, function(err, model) {
+    app.models.DappStackUser.create(DappStackUser, function(err, model) {
       if (err) throw err;
 
       console.log('Created:', model);

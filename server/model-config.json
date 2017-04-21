@@ -13,15 +13,34 @@
       "./mixins"
     ]
   },
-  "dapp": {
+  "User": {
+    "dataSource": "DappstackDB"
+  },
+  "AccessToken": {
+    "dataSource": "DappstackDB",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "DappstackDB",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "DappstackDB",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "DappstackDB",
+    "public": false
+  },
+  "Dapp": {
     "dataSource": "DappstackDB",
     "public": true
   },
-  "dappStackUser": {
+  "DappStackUser": {
     "dataSource": "DappstackDB",
     "public": true
   },
-  "comment": {
+  "Comment": {
     "dataSource": "DappstackDB",
     "public": true
   }

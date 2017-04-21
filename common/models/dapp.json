@@ -1,5 +1,5 @@
 {
-  "name": "dapp",
+  "name": "Dapp",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {

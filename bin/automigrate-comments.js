@@ -2,7 +2,7 @@ var path = require('path');
 
 var app = require(path.resolve(__dirname, '../server/server'));
 var ds = app.datasources.DappstackDB;
-ds.automigrate('comment', function(err) {
+ds.automigrate('Comment', function(err) {
   if (err) throw err;
 
   var comments = [
@@ -23,7 +23,7 @@ ds.automigrate('comment', function(err) {
   ];
   var count = comments.length;
   comments.forEach(function(comment) {
-    app.models.comment.create(comment, function(err, model) {
+    app.models.Comment.create(Comment, function(err, model) {
       if (err) throw err;
 
       console.log('Created:', model);

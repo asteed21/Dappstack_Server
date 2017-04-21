@@ -1,5 +1,5 @@
 {
-  "name": "dappStackUser",
+  "name": "DappStackUser",
   "base": "User",
   "idInjection": true,
   "options": {
