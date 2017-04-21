@@ -29,7 +29,7 @@ ds.automigrate('DappStackUser', function(err) {
   ];
   var count = dappStackUsers.length;
   dappStackUsers.forEach(function(dappStackUser) {
-    app.models.DappStackUser.create(DappStackUser, function(err, model) {
+    app.models.DappStackUser.create(dappStackUser, function(err, model) {
       if (err) throw err;
 
       console.log('Created:', model);

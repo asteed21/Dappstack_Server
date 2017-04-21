@@ -23,7 +23,7 @@ ds.automigrate('Comment', function(err) {
   ];
   var count = comments.length;
   comments.forEach(function(comment) {
-    app.models.Comment.create(Comment, function(err, model) {
+    app.models.Comment.create(comment, function(err, model) {
       if (err) throw err;
 
       console.log('Created:', model);

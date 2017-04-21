@@ -23,7 +23,7 @@ ds.automigrate('Dapp', function(err) {
   ];
   var count = dapps.length;
   dapps.forEach(function(dapp) {
-    app.models.Dapp.create(Dapp, function(err, model) {
+    app.models.Dapp.create(dapp, function(err, model) {
       if (err) throw err;
 
       console.log('Created:', model);
