@@ -71,6 +71,11 @@
       "type": "hasMany",
       "model": "Comment",
       "foreignKey": "commentId"
+    },
+    "owners": {
+      "type": "hasMany",
+      "model": "DappStackUser",
+      "foreignKey": "dappStackUserId"
     }
   },
   "acls": [],

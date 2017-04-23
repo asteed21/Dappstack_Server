@@ -15,11 +15,6 @@
       "required": true,
       "default": ""
     },
-    "authorId": {
-      "type": "string",
-      "required": true,
-      "default": ""
-    },
     "upVotes": {
       "type": "number",
       "required": true,
@@ -29,10 +24,26 @@
       "type": "number",
       "required": true,
       "default": 0
+    },
+    "createdDate": {
+      "type": "date",
+      "required": true,
+      "default": ""
+    },
+    "lastUpdatedDate": {
+      "type": "date",
+      "required": true,
+      "default": ""
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "author": {
+      "type": "hasOne",
+      "model": "DappStackUser",
+      "foreignKey": "dappStackUserId"
+    }
+  },
   "acls": [],
   "methods": {}
 }
