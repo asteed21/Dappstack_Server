@@ -10,17 +10,22 @@
       "type": "string",
       "required": true
     },
-    "dappId": {
-      "type": "string",
-      "required": true,
-      "default": ""
-    },
     "upVotes": {
+      "type": [
+        "string"
+      ]
+    },
+    "downVotes": {
+      "type": [
+        "string"
+      ]
+    },
+    "numUpVotes": {
       "type": "number",
       "required": true,
       "default": 0
     },
-    "downVotes": {
+    "numDownVotes": {
       "type": "number",
       "required": true,
       "default": 0
@@ -39,7 +44,7 @@
   "validations": [],
   "relations": {
     "author": {
-      "type": "hasOne",
+      "type": "belongsTo",
       "model": "DappStackUser",
       "foreignKey": "dappStackUserId"
     }
