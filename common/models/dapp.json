@@ -30,7 +30,7 @@
       "required": true,
       "default": 0
     },
-    "owners": {
+    "ownerIds": {
       "type": [
         "string"
       ],
@@ -54,11 +54,6 @@
       "type": "boolean",
       "required": true,
       "default": false
-    },
-    "comments": {
-      "type": [
-        "comment"
-      ]
     },
     "aboutContent": {
       "type": "string",

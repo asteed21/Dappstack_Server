@@ -10,7 +10,12 @@
       "type": "string",
       "required": true
     },
-    "author": {
+    "dappId": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    },
+    "authorId": {
       "type": "string",
       "required": true,
       "default": ""
