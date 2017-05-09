@@ -32,7 +32,7 @@
     "dataSource": "DappstackDB",
     "public": false
   },
-  "Dapp": {
+  "Dapps": {
     "dataSource": "DappstackDB",
     "public": true
   },
@@ -40,7 +40,11 @@
     "dataSource": "DappstackDB",
     "public": true
   },
-  "Comment": {
+  "Comments": {
+    "dataSource": "DappstackDB",
+    "public": true
+  },
+  "Favorites": {
     "dataSource": "DappstackDB",
     "public": true
   }

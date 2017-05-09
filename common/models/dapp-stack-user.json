@@ -33,8 +33,13 @@
   "relations": {
     "comments": {
       "type": "hasMany",
-      "model": "Comment",
-      "foreignKey": "commentId"
+      "model": "Comments",
+      "foreignKey": "dappStackUserId"
+    },
+    "favorites": {
+      "type": "hasMany",
+      "model": "Favorites",
+      "foreignKey": "dappStackUserId"
     }
   },
   "acls": [],

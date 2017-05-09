@@ -1,0 +1,118 @@
+{
+  "name": "Dapps",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "tags": {
+      "type": [
+        "string"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "required": true,
+      "default": "In Progress"
+    },
+    "likes": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "timesFavorited": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "ownerIds": {
+      "type": [
+        "string"
+      ],
+      "required": true
+    },
+    "releaseDate": {
+      "type": "date"
+    },
+    "website": {
+      "type": "url"
+    },
+    "socialLinks": {
+      "type": [
+        "object"
+      ]
+    },
+    "logoImage": {
+      "type": "string"
+    },
+    "featured": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "thumbnailDescription": {
+      "type": "string",
+      "required": true
+    },
+    "aboutContent": {
+      "type": "string",
+      "required": true
+    },
+    "aboutImages": {
+      "type": [
+        "string"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {
+    "comments": {
+      "type": "hasMany",
+      "model": "Comments",
+      "foreignKey": ""
+    },
+    "owners": {
+      "type": "hasMany",
+      "model": "DappStackUser",
+      "foreignKey": ""
+    },
+    "favorites": {
+      "type": "hasMany",
+      "model": "Favorites",
+      "foreignKey": ""
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "administrator",
+      "permission": "ALLOW",
+      "property": "create"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

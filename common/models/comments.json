@@ -1,79 +1,50 @@
 {
-  "name": "Dapp",
+  "name": "Comments",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "name": {
+    "text": {
       "type": "string",
       "required": true
     },
-    "tags": {
+    "upVotes": {
       "type": [
         "string"
       ]
     },
-    "status": {
-      "type": "string",
-      "required": true,
-      "default": "In Progress"
+    "downVotes": {
+      "type": [
+        "string"
+      ]
     },
-    "likes": {
+    "numUpVotes": {
       "type": "number",
       "required": true,
       "default": 0
     },
-    "timesFavorited": {
+    "numDownVotes": {
       "type": "number",
       "required": true,
       "default": 0
     },
-    "ownerIds": {
-      "type": [
-        "string"
-      ],
-      "required": true
-    },
-    "releaseDate": {
-      "type": "date"
-    },
-    "website": {
-      "type": "url"
-    },
-    "socialLinks": {
-      "type": [
-        "object"
-      ]
-    },
-    "logoImg": {
-      "type": "string"
-    },
-    "featured": {
-      "type": "boolean",
+    "createdDate": {
+      "type": "date",
       "required": true,
-      "default": false
+      "default": ""
     },
-    "aboutContent": {
-      "type": "string",
-      "required": true
-    },
-    "aboutImages": {
-      "type": [
-        "string"
-      ]
+    "lastUpdatedDate": {
+      "type": "date",
+      "required": true,
+      "default": ""
     }
   },
   "validations": [],
   "relations": {
-    "comments": {
-      "type": "hasMany",
-      "model": "Comment",
-      "foreignKey": "commentId"
-    },
-    "owners": {
-      "type": "hasMany",
+    "author": {
+      "type": "belongsTo",
       "model": "DappStackUser",
       "foreignKey": "dappStackUserId"
     }
@@ -94,7 +65,7 @@
     {
       "accessType": "EXECUTE",
       "principalType": "ROLE",
-      "principalId": "administrator",
+      "principalId": "$authenticated",
       "permission": "ALLOW",
       "property": "create"
     },
