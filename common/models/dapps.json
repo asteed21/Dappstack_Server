@@ -40,12 +40,10 @@
       "type": "date"
     },
     "website": {
-      "type": "url"
+      "type": "string"
     },
     "socialLinks": {
-      "type": [
-        "object"
-      ]
+      "type": "object"
     },
     "logoImage": {
       "type": "string"
@@ -65,7 +63,7 @@
     },
     "aboutImages": {
       "type": [
-        "string"
+        "object"
       ]
     }
   },
@@ -84,6 +82,11 @@
     "favorites": {
       "type": "hasMany",
       "model": "Favorites",
+      "foreignKey": ""
+    },
+    "likes": {
+      "type": "hasMany",
+      "model": "Likes",
       "foreignKey": ""
     }
   },

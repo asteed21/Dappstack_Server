@@ -1,5 +1,5 @@
 'use strict';
 
-module.exports = function(Dappstackuser) {
+module.exports = function(DappStackUser) {
 
 };

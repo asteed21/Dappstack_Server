@@ -9,39 +9,32 @@
     "TimeStamp": true
   },
   "properties": {
-    "text": {
+    "comment": {
       "type": "string",
       "required": true
     },
     "upVotes": {
-      "type": [
-        "string"
-      ]
+      "type": "number",
+      "required": true,
+      "default": 0
     },
     "downVotes": {
-      "type": [
-        "string"
-      ]
-    },
-    "numUpVotes": {
       "type": "number",
       "required": true,
       "default": 0
     },
-    "numDownVotes": {
+    "points": {
       "type": "number",
       "required": true,
       "default": 0
     },
-    "createdDate": {
-      "type": "date",
-      "required": true,
-      "default": ""
+    "editing": {
+      "type": "boolean",
+      "default": false
     },
-    "lastUpdatedDate": {
-      "type": "date",
-      "required": true,
-      "default": ""
+    "replying": {
+      "type": "boolean",
+      "default": false
     }
   },
   "validations": [],
@@ -50,6 +43,11 @@
       "type": "belongsTo",
       "model": "DappStackUser",
       "foreignKey": "dappStackUserId"
+    },
+    "comments": {
+      "type": "hasMany",
+      "model": "Comments",
+      "foreignKey": ""
     }
   },
   "acls": [

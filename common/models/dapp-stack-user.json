@@ -12,21 +12,25 @@
     },
     "firstName": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "lastName": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "role": {
       "type": "string",
       "required": true,
       "default": "user"
     },
-    "favorites": {
-      "type": [
-        "string"
-      ]
+    "owner": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "profileImage": {
+      "type": "string",
+      "default": "/images/profile_placeholder.png"
     }
   },
   "validations": [],
@@ -40,6 +44,17 @@
       "type": "hasMany",
       "model": "Favorites",
       "foreignKey": "dappStackUserId"
+    },
+    "likes": {
+      "type": "hasMany",
+      "model": "Likes",
+      "foreignKey": "dappStackUserId"
+    },
+    "roles": {
+      "type": "hasMany",
+      "model": "Role",
+      "foreignKey": "principalId",
+      "through": "RoleMapping"
     }
   },
   "acls": [

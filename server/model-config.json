@@ -14,11 +14,19 @@
     ]
   },
   "User": {
-    "dataSource": "DappstackDB"
+    "dataSource": "DappstackDB",
+    "public": true
   },
   "AccessToken": {
     "dataSource": "DappstackDB",
-    "public": false
+    "public": false,
+    "relations": {
+      "user": {
+        "type": "belongsTo",
+        "model": "user",
+        "foreignKey": "userId"
+      }
+    }
   },
   "ACL": {
     "dataSource": "DappstackDB",
@@ -46,6 +54,14 @@
   },
   "Favorites": {
     "dataSource": "DappstackDB",
+    "public": true
+  },
+  "Likes": {
+    "dataSource": "DappstackDB",
+    "public": true
+  },
+  "Attachments": {
+    "dataSource": "storage",
     "public": true
   }
 }
