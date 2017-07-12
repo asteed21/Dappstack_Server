@@ -14,8 +14,7 @@
     ]
   },
   "User": {
-    "dataSource": "DappstackDB",
-    "public": true
+    "dataSource": "DappstackDB"
   },
   "AccessToken": {
     "dataSource": "DappstackDB",
@@ -40,28 +39,28 @@
     "dataSource": "DappstackDB",
     "public": false
   },
-  "Dapps": {
+  "dapp": {
     "dataSource": "DappstackDB",
     "public": true
   },
-  "DappStackUser": {
+  "dappStackUser": {
     "dataSource": "DappstackDB",
     "public": true
   },
-  "Comments": {
+  "comment": {
     "dataSource": "DappstackDB",
     "public": true
   },
-  "Favorites": {
+  "favorite": {
     "dataSource": "DappstackDB",
     "public": true
   },
-  "Likes": {
+  "like": {
     "dataSource": "DappstackDB",
     "public": true
   },
-  "Attachments": {
-    "dataSource": "storage",
-    "public": true
+  "dappTeam": {
+    "dataSource": "DappstackDB",
+    "public": false
   }
 }

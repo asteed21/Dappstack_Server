@@ -1,5 +1,5 @@
 {
-  "name": "Likes",
+  "name": "comment",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -8,17 +8,45 @@
   "mixins": {
     "TimeStamp": true
   },
-  "properties": {},
+  "properties": {
+    "comment": {
+      "type": "string",
+      "required": true
+    },
+    "upVotes": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "downVotes": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "points": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "editing": {
+      "type": "boolean",
+      "default": false
+    },
+    "replying": {
+      "type": "boolean",
+      "default": false
+    }
+  },
   "validations": [],
   "relations": {
-    "dappStackUser": {
+    "author": {
       "type": "belongsTo",
       "model": "DappStackUser",
       "foreignKey": "dappStackUserId"
     },
-    "dapps": {
-      "type": "belongsTo",
-      "model": "Dapps",
+    "comments": {
+      "type": "hasMany",
+      "model": "Comments",
       "foreignKey": ""
     }
   },
@@ -32,7 +60,7 @@
     {
       "accessType": "READ",
       "principalType": "ROLE",
-      "principalId": "$everyone",
+      "principalId": "$authenticated",
       "permission": "ALLOW"
     },
     {

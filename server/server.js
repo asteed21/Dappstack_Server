@@ -2,11 +2,14 @@
 
 var loopback = require('loopback');
 var boot = require('loopback-boot');
+var app = module.exports = loopback();
+var cookieParser = require('cookie-parser');
+
+
+//Passport configuration
 var loopbackPassport = require('loopback-component-passport');
 var PassportConfigurator = loopbackPassport.PassportConfigurator;
 var passportConfigurator = new PassportConfigurator(app);
-
-var app = module.exports = loopback();
 
 app.start = function() {
   // start the web server

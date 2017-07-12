@@ -1,5 +1,5 @@
 {
-  "name": "Favorites",
+  "name": "likes",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
