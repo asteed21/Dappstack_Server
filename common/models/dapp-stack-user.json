@@ -14,11 +14,6 @@
       "type": "string",
       "required": false
     },
-    "role": {
-      "type": "string",
-      "required": true,
-      "default": "user"
-    },
     "profileImage": {
       "type": "string",
       "default": "/images/profile_placeholder.png"
@@ -28,29 +23,30 @@
   "relations": {
     "comments": {
       "type": "hasMany",
-      "model": "Comments",
+      "model": "comment",
       "foreignKey": "dappStackUserId"
     },
     "favorites": {
       "type": "hasMany",
-      "model": "Favorites",
+      "model": "favorite",
       "foreignKey": "dappStackUserId"
     },
     "likes": {
       "type": "hasMany",
-      "model": "Likes",
+      "model": "like",
       "foreignKey": "dappStackUserId"
+    },
+    "teams": {
+      "type": "hasMany",
+      "model": "dappTeam",
+      "foreignKey": "memberId",
+      "through": "dappTeamMember"
     },
     "roles": {
       "type": "hasMany",
       "model": "Role",
       "foreignKey": "principalId",
       "through": "RoleMapping"
-    },
-    "dappTeams": {
-      "type": "hasMany",
-      "model": "dappTeam",
-      "foreignKey": "ownerId"
     }
   },
   "acls": [
@@ -63,24 +59,11 @@
     {
       "accessType": "READ",
       "principalType": "ROLE",
-      "principalId": "admin",
-      "permission": "ALLOW"
-    },
-    {
-      "accessType": "READ",
-      "principalType": "ROLE",
       "principalId": "$owner",
       "permission": "ALLOW"
     },
     {
-      "accessType": "EXECUTE",
-      "principalType": "ROLE",
-      "principalId": "admin",
-      "permission": "ALLOW",
-      "property": "create"
-    },
-    {
-      "accessType": "WRITE",
+      "accessType": "*",
       "principalType": "ROLE",
       "principalId": "admin",
       "permission": "ALLOW"

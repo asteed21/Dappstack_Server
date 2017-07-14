@@ -1,5 +1,5 @@
 'use strict';
 
-module.exports = function(likes) {
+module.exports = function(like) {
 
 };

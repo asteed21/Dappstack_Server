@@ -14,7 +14,8 @@
     ]
   },
   "User": {
-    "dataSource": "DappstackDB"
+    "dataSource": "DappstackDB",
+    "public": false
   },
   "AccessToken": {
     "dataSource": "DappstackDB",
@@ -33,7 +34,10 @@
   },
   "RoleMapping": {
     "dataSource": "DappstackDB",
-    "public": false
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
   },
   "Role": {
     "dataSource": "DappstackDB",
@@ -59,8 +63,8 @@
     "dataSource": "DappstackDB",
     "public": true
   },
-  "dappTeam": {
+  "dappTeamMember": {
     "dataSource": "DappstackDB",
-    "public": false
+    "public": true
   }
 }

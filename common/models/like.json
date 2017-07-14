@@ -1,5 +1,5 @@
 {
-  "name": "likes",
+  "name": "like",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -11,14 +11,14 @@
   "properties": {},
   "validations": [],
   "relations": {
-    "dappStackUser": {
+    "dappStackUsers": {
       "type": "belongsTo",
-      "model": "DappStackUser",
+      "model": "dappStackUser",
       "foreignKey": "dappStackUserId"
     },
     "dapps": {
       "type": "belongsTo",
-      "model": "Dapps",
+      "model": "dapp",
       "foreignKey": ""
     }
   },

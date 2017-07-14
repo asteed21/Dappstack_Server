@@ -30,12 +30,6 @@
       "required": true,
       "default": 0
     },
-    "ownerIds": {
-      "type": [
-        "string"
-      ],
-      "required": true
-    },
     "releaseDate": {
       "type": "date"
     },
@@ -71,23 +65,29 @@
   "relations": {
     "comments": {
       "type": "hasMany",
-      "model": "Comments",
+      "model": "comment",
       "foreignKey": ""
     },
     "favorites": {
       "type": "hasMany",
-      "model": "Favorites",
+      "model": "favorite",
       "foreignKey": ""
     },
     "likes": {
       "type": "hasMany",
-      "model": "Likes",
+      "model": "like",
       "foreignKey": ""
     },
     "dappTeam": {
-      "type": "belongsTo",
+      "type": "hasOne",
       "model": "dappTeam",
       "foreignKey": ""
+    },
+    "teamMembers": {
+      "type": "hasMany",
+      "model": "dappStackUser",
+      "foreignKey": "dappId",
+      "through": "dappTeamMember"
     }
   },
   "acls": [
@@ -100,18 +100,18 @@
     {
       "accessType": "READ",
       "principalType": "ROLE",
-      "principalId": "$everyone",
+      "principalId": "$authenticated",
       "permission": "ALLOW"
     },
     {
-      "accessType": "EXECUTE",
+      "accessType": "WRITE",
       "principalType": "ROLE",
-      "principalId": "admin",
+      "principalId": "dappTeamMember",
       "permission": "ALLOW",
-      "property": "create"
+      "property": "updateAttributes"
     },
     {
-      "accessType": "WRITE",
+      "accessType": "*",
       "principalType": "ROLE",
       "principalId": "admin",
       "permission": "ALLOW"

@@ -1,5 +1,5 @@
 {
-  "name": "dappTeam",
+  "name": "dappTeamMember",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -9,14 +9,23 @@
     "memberId": {
       "type": "string",
       "required": true
+    },
+    "dappId": {
+      "type": "string",
+      "required": true
     }
   },
   "validations": [],
   "relations": {
-    "members": {
-      "type": "hasMany",
+    "dappStackUser": {
+      "type": "belongsTo",
       "model": "dappStackUser",
       "foreignKey": "memberId"
+    },
+    "dapp": {
+      "type": "belongsTo",
+      "model": "dapp",
+      "foreignKey": "dappId"
     }
   },
   "acls": [],
