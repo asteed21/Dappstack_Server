@@ -175,7 +175,7 @@ module.exports = function(app) {
                 twitter:'https://twitter.com/etherplay',
                 github:'https://github.com/etherplay'
             },
-            logoImage: './images/test_pics/etherplay_logo.png',
+            logoImage: './images/test_pics/etherplay_logo.jpg',
             featured: false,
             thumbnailDescription: 'Play Games and Win Ether!',
             aboutContent: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
@@ -193,6 +193,49 @@ module.exports = function(app) {
             TeamMember.create([
                 {dappId: dapp.id, memberId: users[2].id,},
                 {dappId: dapp.id, memberId: users[1].id}
+            ], function(err, dappTeam) {
+                if (err) throw err;
+
+                console.log('Created team:', dapp.teamMembers);
+            });
+        });
+
+        //create dapp 5 and assign team
+        Dapp.create({
+            name: 'DNN',
+            tags: [
+                'news',
+                'distributed',
+                'fake'
+            ],
+            status: 'In Progress',
+            likes: 14,
+            timesFavorited: 500,
+            releaseDate: '10/07/19',
+            website: 'http://dnn.com/',
+            socialLinks: {
+                facebook:'https://www.facebook.com/dnn/',
+                twitter:'https://twitter.com/dnn',
+                github:'https://github.com/dnn'
+            },
+            logoImage: './images/test_pics/dnn_logo.jpeg',
+            featured: false,
+            thumbnailDescription: 'Decentralized News Network',
+            aboutContent: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            aboutImages: [
+                {id: 1, image: './images/test_pics/dnn_1.png'},
+                {id: 2, image: './images/test_pics/dnn_2.png'},
+                {id: 3, image: './images/test_pics/dnn_3.jpg'}
+            ]
+        }, function(err, dapp) {
+            if (err) throw err;
+
+            console.log('Created project:', dapp);
+
+            // add team members
+            TeamMember.create([
+                {dappId: dapp.id, memberId: users[0].id,},
+                {dappId: dapp.id, memberId: users[3].id}
             ], function(err, dappTeam) {
                 if (err) throw err;
 

@@ -66,5 +66,13 @@
   "dappTeamMember": {
     "dataSource": "DappstackDB",
     "public": true
+  },
+  "tag": {
+    "dataSource": "DappstackDB",
+    "public": true
+  },
+  "category": {
+    "dataSource": "DappstackDB",
+    "public": true
   }
 }

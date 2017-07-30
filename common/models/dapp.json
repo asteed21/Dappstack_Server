@@ -10,11 +10,6 @@
       "type": "string",
       "required": true
     },
-    "tags": {
-      "type": [
-        "string"
-      ]
-    },
     "status": {
       "type": "string",
       "required": true,
@@ -88,6 +83,16 @@
       "model": "dappStackUser",
       "foreignKey": "dappId",
       "through": "dappTeamMember"
+    },
+    "tags": {
+      "type": "hasAndBelongsToMany",
+      "model": "tag",
+      "foreignKey": ""
+    },
+    "categories": {
+      "type": "hasAndBelongsToMany",
+      "model": "category",
+      "foreignKey": ""
     }
   },
   "acls": [
