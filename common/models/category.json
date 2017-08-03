@@ -1,0 +1,37 @@
+{
+  "name": "category",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "icon": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "categories": {
+      "type": "embedsMany",
+      "model": "category",
+      "property": "subCategories",
+      "options": {
+        "validate": true,
+        "forceId": false
+      }
+    },
+    "dapps": {
+      "type": "hasAndBelongsToMany",
+      "model": "dapp",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
