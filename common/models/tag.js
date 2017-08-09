@@ -1,5 +1,5 @@
 'use strict';
 
-module.exports = function(Tag) {
+module.exports = function(tag) {
 
 };
