@@ -9,16 +9,18 @@
     "name": {
       "type": "string",
       "required": true,
-      "index": {"unique": true}
+      "index": true
     },
     "category": {
       "type": "string",
-      "required": true
+      "required": true,
+      "index": true
     },
     "tags": {
       "type": [
         "string"
-      ]
+      ],
+      "index": true
     },
     "status": {
       "type": "string",
@@ -55,12 +57,12 @@
     "thumbnailDescription": {
       "type": "string",
       "required": true,
-      "index": {"unique": true}
+      "index": true
     },
     "aboutContent": {
       "type": "string",
       "required": true,
-      "index": {"unique": true}
+      "index": true
     },
     "aboutImages": {
       "type": [
