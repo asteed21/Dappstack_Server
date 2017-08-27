@@ -27,16 +27,6 @@
       "required": true,
       "default": "In Progress"
     },
-    "likes": {
-      "type": "number",
-      "required": true,
-      "default": 0
-    },
-    "timesFavorited": {
-      "type": "number",
-      "required": true,
-      "default": 0
-    },
     "releaseDate": {
       "type": "date"
     },

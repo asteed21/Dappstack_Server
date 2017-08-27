@@ -4,7 +4,8 @@
       "loopback/common/models",
       "loopback/server/models",
       "../common/models",
-      "./models"
+      "./models",
+      "../node_modules/loopback-component-passport/lib/models"
     ],
     "mixins": [
       "loopback/common/mixins",
@@ -14,19 +15,11 @@
     ]
   },
   "User": {
-    "dataSource": "DappstackDB",
-    "public": false
+    "dataSource": "DappstackDB"
   },
   "AccessToken": {
     "dataSource": "DappstackDB",
-    "public": false,
-    "relations": {
-      "user": {
-        "type": "belongsTo",
-        "model": "user",
-        "foreignKey": "userId"
-      }
-    }
+    "public": false
   },
   "ACL": {
     "dataSource": "DappstackDB",

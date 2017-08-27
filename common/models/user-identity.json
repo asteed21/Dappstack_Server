@@ -1,0 +1,27 @@
+{
+  "name": "userIdentity",
+  "plural": "userIdentities",
+  "base": "UserIdentity",
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "user": {
+      "type": "belongsTo",
+      "model": "dappStackUser",
+      "foreignKey": "dappStackUserId"
+    }
+  },
+  "acls": [
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

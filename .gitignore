@@ -3,3 +3,9 @@ node_modules/
 
 #tmp storage data
 tmp
+
+#secret keys and such
+env-vars
+
+#storage of oAuth dependencies
+providers.json

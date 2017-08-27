@@ -41,12 +41,17 @@
   "relations": {
     "author": {
       "type": "belongsTo",
-      "model": "DappStackUser",
+      "model": "dappStackUser",
       "foreignKey": "dappStackUserId"
     },
     "comments": {
       "type": "hasMany",
-      "model": "Comments",
+      "model": "comment",
+      "foreignKey": ""
+    },
+    "dapp": {
+      "type": "belongsTo",
+      "model": "dapp",
       "foreignKey": ""
     }
   },
