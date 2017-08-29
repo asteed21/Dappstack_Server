@@ -44,10 +44,15 @@
       "model": "dappStackUser",
       "foreignKey": "dappStackUserId"
     },
-    "comments": {
+    "replies": {
       "type": "hasMany",
       "model": "comment",
-      "foreignKey": ""
+      "foreignKey": "parentId"
+    },
+    "parent": {
+      "type": "belongsTo",
+      "model": "comment",
+      "foreignKey": "parentId"
     },
     "dapp": {
       "type": "belongsTo",
