@@ -5661,7 +5661,7 @@ module.exports = angular.module('dappstackApp', [
   'dappstackApp.components',
 ])
 
-.constant('urlBase','http://localhost:5000/api') //http://0.0.0.0:3000/api
+.constant('urlBase','https://dappstack.herokuapp.com/') //http://0.0.0.0:3000/api
 
 .config( function($stateProvider, $urlServiceProvider, LoopBackResourceProvider, urlBase) {
 
@@ -73739,7 +73739,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              *  - `id` – `{*}` - dappStackUser id
              *
+             *  - `options` – `{object=}` -
+             *
              *  - `fk` – `{*}` - Foreign key for accessTokens
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -73777,7 +73781,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              *  - `id` – `{*}` - dappStackUser id
              *
+             *  - `options` – `{object=}` -
+             *
              *  - `fk` – `{*}` - Foreign key for accessTokens
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -73816,7 +73824,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object} postData Request data.
              *
-             * This method expects a subset of model properties as request parameters.
+             *  - `options` – `{object=}` -
+             *
+             *  - `data` – `{object=}` -
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -73854,7 +73866,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              *  - `id` – `{*}` - dappStackUser id
              *
+             *  - `options` – `{object=}` -
+             *
              *  - `fk` – `{*}` - Foreign key for roles
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -73892,7 +73908,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              *  - `id` – `{*}` - dappStackUser id
              *
+             *  - `options` – `{object=}` -
+             *
              *  - `fk` – `{*}` - Foreign key for roles
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -73931,7 +73951,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object} postData Request data.
              *
-             * This method expects a subset of model properties as request parameters.
+             *  - `options` – `{object=}` -
+             *
+             *  - `data` – `{object=}` -
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -73973,7 +73997,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object} postData Request data.
              *
-             * This method expects a subset of model properties as request parameters.
+             *  - `options` – `{object=}` -
+             *
+             *  - `data` – `{object=}` -
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -74011,7 +74039,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              *  - `id` – `{*}` - dappStackUser id
              *
+             *  - `options` – `{object=}` -
+             *
              *  - `fk` – `{*}` - Foreign key for roles
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -74046,7 +74078,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              *  - `id` – `{*}` - dappStackUser id
              *
+             *  - `options` – `{object=}` -
+             *
              *  - `fk` – `{*}` - Foreign key for roles
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -74165,7 +74201,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              *  - `id` – `{*}` - dappStackUser id
              *
+             *  - `options` – `{object=}` -
+             *
              *  - `filter` – `{object=}` -
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Array.<Object>,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -74203,7 +74243,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object} postData Request data.
              *
-             * This method expects a subset of model properties as request parameters.
+             *  - `options` – `{object=}` -
+             *
+             *  - `data` – `{object=}` -
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -74238,7 +74282,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              *  - `id` – `{*}` - dappStackUser id
              *
+             *  - `options` – `{object=}` -
+             *
              *  - `where` – `{object=}` -
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -74270,7 +74318,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              *  - `id` – `{*}` - dappStackUser id
              *
+             *  - `options` – `{object=}` -
+             *
              *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -74304,7 +74356,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              *  - `id` – `{*}` - dappStackUser id
              *
+             *  - `options` – `{object=}` -
+             *
              *  - `filter` – `{object=}` -
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Array.<Object>,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -74342,7 +74398,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object} postData Request data.
              *
-             * This method expects a subset of model properties as request parameters.
+             *  - `options` – `{object=}` -
+             *
+             *  - `data` – `{object=}` -
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -74377,7 +74437,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              *  - `id` – `{*}` - dappStackUser id
              *
+             *  - `options` – `{object=}` -
+             *
              *  - `where` – `{object=}` -
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -74409,7 +74473,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              *  - `id` – `{*}` - dappStackUser id
              *
+             *  - `options` – `{object=}` -
+             *
              *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -74521,7 +74589,9 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object} postData Request data.
              *
-             * This method expects a subset of model properties as request parameters.
+             *  - `data` – `{object=}` - Model instance data
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -74559,7 +74629,9 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object} postData Request data.
              *
-             * This method expects a subset of model properties as request parameters.
+             *  - `data` – `{object=}` - Model instance data
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Array.<Object>,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -74598,7 +74670,9 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object} postData Request data.
              *
-             * This method expects a subset of model properties as request parameters.
+             *  - `data` – `{object=}` - Model instance data
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -74636,7 +74710,9 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object} postData Request data.
              *
-             * This method expects a subset of model properties as request parameters.
+             *  - `data` – `{object=}` - Model instance data
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -74673,7 +74749,9 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object} postData Request data.
              *
-             * This method expects a subset of model properties as request parameters.
+             *  - `data` – `{object=}` - An object of model property name/value pairs
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -74708,6 +74786,8 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              *  - `id` – `{*}` - Model id
              *
+             *  - `options` – `{object=}` -
+             *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
              *
@@ -74741,6 +74821,8 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *  - `id` – `{*}` - Model id
              *
              *  - `filter` – `{object=}` - Filter defining fields and include
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -74777,7 +74859,9 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object} postData Request data.
              *
-             * This method expects a subset of model properties as request parameters.
+             *  - `data` – `{object=}` - Model instance data
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -74812,6 +74896,8 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
              *
+             *  - `options` – `{object=}` -
+             *
              * @param {function(Array.<Object>,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
              *
@@ -74845,6 +74931,8 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * @param {Object=} parameters Request parameters.
              *
              *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -74881,7 +74969,9 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object} postData Request data.
              *
-             * This method expects a subset of model properties as request parameters.
+             *  - `data` – `{object=}` - An object of model property name/value pairs
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -74912,6 +75002,8 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * @param {Object=} parameters Request parameters.
              *
              *  - `id` – `{*}` - Model id
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -74945,6 +75037,8 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * @param {Object=} parameters Request parameters.
              *
              *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -74980,7 +75074,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object} postData Request data.
              *
-             * This method expects a subset of model properties as request parameters.
+             *  - `options` – `{object=}` -
+             *
+             *  - `data` – `{object=}` - An object of model property name/value pairs
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -75385,7 +75483,9 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object} postData Request data.
              *
-             * This method expects a subset of model properties as request parameters.
+             *  - `data` – `{object=}` - Model instance data
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -75420,7 +75520,9 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object} postData Request data.
              *
-             * This method expects a subset of model properties as request parameters.
+             *  - `data` – `{object=}` - Model instance data
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -75454,7 +75556,9 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object} postData Request data.
              *
-             * This method expects a subset of model properties as request parameters.
+             *  - `data` – `{object=}` - An object of model property name/value pairs
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -75488,7 +75592,9 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object} postData Request data.
              *
-             * This method expects a subset of model properties as request parameters.
+             *  - `data` – `{object=}` - An object of model property name/value pairs
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -75516,6 +75622,8 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * @param {Object=} parameters Request parameters.
              *
              *  - `id` – `{*}` - Model id
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -75546,6 +75654,8 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * @param {Object=} parameters Request parameters.
              *
              *  - `id` – `{*}` - Model id
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -75579,7 +75689,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object} postData Request data.
              *
-             * This method expects a subset of model properties as request parameters.
+             *  - `options` – `{object=}` -
+             *
+             *  - `data` – `{object=}` - An object of model property name/value pairs
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -75678,7 +75792,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              *  - `id` – `{*}` - dappStackUser id
              *
+             *  - `options` – `{object=}` -
+             *
              *  - `filter` – `{object=}` -
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Array.<Object>,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -75714,7 +75832,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              *  - `id` – `{*}` - dappStackUser id
              *
+             *  - `options` – `{object=}` -
+             *
              *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -75751,7 +75873,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object} postData Request data.
              *
-             * This method expects a subset of model properties as request parameters.
+             *  - `options` – `{object=}` -
+             *
+             *  - `data` – `{object=}` -
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -75789,7 +75915,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object} postData Request data.
              *
-             * This method expects a subset of model properties as request parameters.
+             *  - `options` – `{object=}` -
+             *
+             *  - `data` – `{object=}` -
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Array.<Object>,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -75825,7 +75955,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              *  - `id` – `{*}` - dappStackUser id
              *
+             *  - `options` – `{object=}` -
+             *
              *  - `where` – `{object=}` -
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -75858,7 +75992,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              *  - `id` – `{*}` - dappStackUser id
              *
+             *  - `options` – `{object=}` -
+             *
              *  - `fk` – `{*}` - Foreign key for comments
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -75891,7 +76029,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              *  - `id` – `{*}` - dappStackUser id
              *
+             *  - `options` – `{object=}` -
+             *
              *  - `fk` – `{*}` - Foreign key for comments
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -75931,7 +76073,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object} postData Request data.
              *
-             * This method expects a subset of model properties as request parameters.
+             *  - `options` – `{object=}` -
+             *
+             *  - `data` – `{object=}` -
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -75981,7 +76127,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              *  - `id` – `{*}` - dappStackUser id
              *
+             *  - `options` – `{object=}` -
+             *
              *  - `filter` – `{object=}` -
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Array.<Object>,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -76017,7 +76167,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              *  - `id` – `{*}` - dappStackUser id
              *
+             *  - `options` – `{object=}` -
+             *
              *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -76054,7 +76208,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object} postData Request data.
              *
-             * This method expects a subset of model properties as request parameters.
+             *  - `options` – `{object=}` -
+             *
+             *  - `data` – `{object=}` -
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -76092,7 +76250,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object} postData Request data.
              *
-             * This method expects a subset of model properties as request parameters.
+             *  - `options` – `{object=}` -
+             *
+             *  - `data` – `{object=}` -
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Array.<Object>,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -76128,7 +76290,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              *  - `id` – `{*}` - dappStackUser id
              *
+             *  - `options` – `{object=}` -
+             *
              *  - `where` – `{object=}` -
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -76161,7 +76327,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              *  - `id` – `{*}` - dappStackUser id
              *
+             *  - `options` – `{object=}` -
+             *
              *  - `fk` – `{*}` - Foreign key for favorites
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -76194,7 +76364,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              *  - `id` – `{*}` - dappStackUser id
              *
+             *  - `options` – `{object=}` -
+             *
              *  - `fk` – `{*}` - Foreign key for favorites
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -76234,7 +76408,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object} postData Request data.
              *
-             * This method expects a subset of model properties as request parameters.
+             *  - `options` – `{object=}` -
+             *
+             *  - `data` – `{object=}` -
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -76284,7 +76462,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              *  - `id` – `{*}` - dappStackUser id
              *
+             *  - `options` – `{object=}` -
+             *
              *  - `filter` – `{object=}` -
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Array.<Object>,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -76320,7 +76502,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              *  - `id` – `{*}` - dappStackUser id
              *
+             *  - `options` – `{object=}` -
+             *
              *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -76357,7 +76543,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object} postData Request data.
              *
-             * This method expects a subset of model properties as request parameters.
+             *  - `options` – `{object=}` -
+             *
+             *  - `data` – `{object=}` -
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -76395,7 +76585,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object} postData Request data.
              *
-             * This method expects a subset of model properties as request parameters.
+             *  - `options` – `{object=}` -
+             *
+             *  - `data` – `{object=}` -
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Array.<Object>,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -76431,7 +76625,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              *  - `id` – `{*}` - dappStackUser id
              *
+             *  - `options` – `{object=}` -
+             *
              *  - `where` – `{object=}` -
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -76464,7 +76662,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              *  - `id` – `{*}` - dappStackUser id
              *
+             *  - `options` – `{object=}` -
+             *
              *  - `fk` – `{*}` - Foreign key for likes
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -76497,7 +76699,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              *  - `id` – `{*}` - dappStackUser id
              *
+             *  - `options` – `{object=}` -
+             *
              *  - `fk` – `{*}` - Foreign key for likes
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -76537,7 +76743,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object} postData Request data.
              *
-             * This method expects a subset of model properties as request parameters.
+             *  - `options` – `{object=}` -
+             *
+             *  - `data` – `{object=}` -
+             *
+             *  - `options` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
