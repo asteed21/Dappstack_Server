@@ -24,7 +24,8 @@
     "passport-google": "^0.3.0",
     "passport-local": "^1.0.0",
     "passport-twitter": "^1.0.4",
-    "serve-favicon": "^2.0.1"
+    "serve-favicon": "^2.0.1",
+    "strong-error-handler": "^2.2.0"
   },
   "devDependencies": {
     "jshint": "^2.5.6"
