@@ -37,7 +37,8 @@
       "type": "object"
     },
     "logoImage": {
-      "type": "string"
+      "type": "string",
+      "default": "./images/test_pics/placeholder_logo.jpg"
     },
     "featured": {
       "type": "boolean",
@@ -57,7 +58,11 @@
     "aboutImages": {
       "type": [
         "object"
-      ]
+      ],
+      "default": {
+        "id": 1,
+        "image": "./images/test_pics/placeholder_1.jpg"
+      }
     }
   },
   "validations": [],
