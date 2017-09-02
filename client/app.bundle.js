@@ -5661,7 +5661,7 @@ module.exports = angular.module('dappstackApp', [
   'dappstackApp.components',
 ])
 
-.constant('urlBase','https://dappstack.herokuapp.com/') //http://0.0.0.0:3000/api
+.constant('urlBase','https://dappstack.herokuapp.com/api') //http://0.0.0.0:3000/api
 
 .config( function($stateProvider, $urlServiceProvider, LoopBackResourceProvider, urlBase) {
 
