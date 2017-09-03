@@ -7,9 +7,7 @@ module.exports = function (app) {
 
     RoleMapping.settings.strictObjectIDCoercion = true;
 
-    console.log(DappstackDB.url);
-
-    app.dataSources.DappstackDB.automigrate([dappStackUser,Role,RoleMapping], function(err) {
+    DappstackDB.automigrate([dappStackUser,Role,RoleMapping], function(err) {
         if (err) throw (err);
         
         dappStackUser.find({ where: { username: 'Admin' }, limit: 1 }, function (err, users) {
