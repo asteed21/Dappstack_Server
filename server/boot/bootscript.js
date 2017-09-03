@@ -7,6 +7,8 @@ module.exports = function (app) {
 
     RoleMapping.settings.strictObjectIDCoercion = true;
 
+    console.log(DappstackDB.connector, DappstackDB.name, DappstackDB.url);
+    
     DappstackDB.automigrate([dappStackUser,Role,RoleMapping], function(err) {
         if (err) throw (err);
         
