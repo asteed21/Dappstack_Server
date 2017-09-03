@@ -2,9 +2,7 @@ module.exports = function (app) {
     var DappstackDB = app.dataSources.DappstackDB;
     var dappStackUser = app.models.dappStackUser;
     var Role = app.models.Role;
-    var Dapp = app.models.dapp;
     var RoleMapping = app.models.RoleMapping;
-    var TeamMember = app.models.dappTeamMember;
     var adminPassword = process.env.ADMIN_ROLE_PW
 
     RoleMapping.settings.strictObjectIDCoercion = true;
