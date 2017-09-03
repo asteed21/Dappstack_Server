@@ -87185,6 +87185,8 @@ angular.module('dappstackApp.components.profile')
             );
         }
 
+		vm.setUserInfo();
+
         $rootScope.$on('login:Successful', function() {
             vm.setUserInfo();
             vm.loggedIn = true;
