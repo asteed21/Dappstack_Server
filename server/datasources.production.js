@@ -7,7 +7,6 @@ module.exports = {
   },
   DappstackDB: {
     connector: 'mongodb',
-    url: process.env.MONGODB_URI,
-    name: 'DappstackDB'
+    url: process.env.MONGODB_URI
   }
 };
