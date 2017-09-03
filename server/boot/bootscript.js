@@ -9,13 +9,13 @@ module.exports = function (app) {
 
     RoleMapping.settings.strictObjectIDCoercion = true;
 
-    DappstackDB.automigrate('User', function(err) {
+    DappstackDB.automigrate([dappStackUser,Role,Dapp,RoleMapping,TeamMember], function(err) {
         if (err) throw (err);
         
-        User.find({ where: { username: 'Admin' }, limit: 1 }, function (err, users) {
+        dappStackUser.find({ where: { username: 'Admin' }, limit: 1 }, function (err, users) {
 
             if (!users) {
-                User.create([
+                dappStackUser.create([
                     {username: 'Admin', email:'admin@admin.com', password: adminPassword, firstName:'Admin', lastName:'(Administrator)'}
                 ], function (err, users) {
                     if (err) return debug(err);
