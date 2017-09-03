@@ -1,5 +1,5 @@
 module.exports = function (app) {
-    var DappstackDB = app.dataSources.production.DappstackDB;
+    var DappstackDB = app.dataSources.DappstackDB;
     var dappStackUser = app.models.dappStackUser;
     var Role = app.models.Role;
     var RoleMapping = app.models.RoleMapping;
