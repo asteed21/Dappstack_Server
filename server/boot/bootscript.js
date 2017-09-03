@@ -7,40 +7,39 @@ module.exports = function (app) {
 
     RoleMapping.settings.strictObjectIDCoercion = true;
 
-    console.log(DappstackDB);
-    // DappstackDB.automigrate([dappStackUser,Role,RoleMapping], function(err) {
-    //     if (err) throw (err);
+    DappstackDB.automigrate([dappStackUser,Role,RoleMapping], function(err) {
+        if (err) throw (err);
         
-    //     dappStackUser.find({ where: { username: 'Admin' }, limit: 1 }, function (err, users) {
+        dappStackUser.find({ where: { username: 'Admin' }, limit: 1 }, function (err, users) {
 
-    //         if (!users) {
-    //             dappStackUser.create([
-    //                 {username: 'Admin', email:'admin@admin.com', password: adminPassword, firstName:'Admin', lastName:'(Administrator)'}
-    //             ], function (err, users) {
-    //                 if (err) return debug(err);
+            if (!users) {
+                dappStackUser.create([
+                    {username: 'Admin', email:'admin@admin.com', password: adminPassword, firstName:'Admin', lastName:'(Administrator)'}
+                ], function (err, users) {
+                    if (err) return debug(err);
 
-    //                 console.log('Created users: ', users);
+                    console.log('Created users: ', users);
 
-    //                 //create the admin role
-    //                 Role.create({
-    //                     name: 'admin'
-    //                 }, function(err, role) {
-    //                     if (err) throw err;
+                    //create the admin role
+                    Role.create({
+                        name: 'admin'
+                    }, function(err, role) {
+                        if (err) throw err;
 
-    //                     console.log('Created role:', role);
+                        console.log('Created role:', role);
 
-    //                     //make bob an admin
-    //                     role.principals.create({
-    //                         principalType: RoleMapping.USER,
-    //                         principalId: users[0].id
-    //                     }, function(err, principal) {
-    //                         if (err) throw err;
+                        //make bob an admin
+                        role.principals.create({
+                            principalType: RoleMapping.USER,
+                            principalId: users[0].id
+                        }, function(err, principal) {
+                            if (err) throw err;
 
-    //                         console.log('Created principal:', principal);
-    //                     });
-    //                 });
-    //             })
-    //         }
-    //     });
-    // });
+                            console.log('Created principal:', principal);
+                        });
+                    });
+                })
+            }
+        });
+    });
 };
