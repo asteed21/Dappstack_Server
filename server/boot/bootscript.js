@@ -1,5 +1,5 @@
 module.exports = function (app) {
-    var DappstackDB = app.dataSources.DappstackDB;
+    var DappstackDB = app.dataSources.mongodb;
     var dappStackUser = app.models.dappStackUser;
     var Role = app.models.Role;
     var RoleMapping = app.models.RoleMapping;
@@ -7,8 +7,8 @@ module.exports = function (app) {
 
     RoleMapping.settings.strictObjectIDCoercion = true;
 
-    console.log(DappstackDB.connector, DappstackDB.name, DappstackDB.url);
-    
+    console.log(DappstackDB.name);
+
     DappstackDB.automigrate([dappStackUser,Role,RoleMapping], function(err) {
         if (err) throw (err);
         
