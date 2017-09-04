@@ -1,6 +1,6 @@
 =======
 
-DappStack_Server_Master
+# DappStack_Server_Master
 
 Repository housing server/backend code for DappStack web application. Part of the capstone project in the Coursera Full Stack Web Development course.
 
